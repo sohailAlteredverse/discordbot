@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@inworld/nodejs-sdk": "^1.14.0",
+    "discord.js": "^14.15.3",
+    "fs": "^0.0.1-security",
+    "node-cron": "^3.0.2",
+    "unidecode": "^0.1.8",
+    "wav-concat": "^1.0.3"
+  },
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "Inworld Discord Chatbot This code is an implementation of a Discord chatbot that interacts with an Inworld AI platform. It allows users to have conversations with an AI using Discord messages.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,63 @@
+Inworld Discord Chatbot
+This code is an implementation of a Discord chatbot that interacts with an Inworld AI platform. It allows users to have conversations with an AI using Discord messages.
+
+Prerequisites
+Before running this code, make sure you have the following:
+
+Node.js installed on your system.
+A valid Inworld API key and secret.
+A valid Discord bot token.
+Installation
+Clone the repository or download the code files.
+
+Open a terminal or command prompt and navigate to the project directory.
+
+Run the following command to install the required dependencies:
+
+Copy code
+npm install
+Configuration
+Before running the code, you need to configure the following environment variables:
+
+inworldKey: Your Inworld API key.
+inworldSecret: Your Inworld API secret.
+inworldScene: The scene name for the Inworld AI.
+discordToken: Your Discord bot token.
+You can set these environment variables in a .env file in the project directory or configure them directly in your hosting environment.
+
+Usage
+To start the Discord chatbot, run the following command:
+
+Copy code
+node index.js
+The bot will log in to Discord using the provided bot token and connect to the specified Inworld AI scene. It will listen for incoming messages and interact with the AI based on the content of the messages.
+
+Commands
+The chatbot recognizes the following commands:
+
+getPrefix: Mention the bot and start the message with "getPrefix" to retrieve the current prefix the bot responds to.
+toggle: Toggle whether the bot responds only when mentioned or to all messages. This command requires authorization.
+changeprefix: Change the prefix the bot responds to. This command requires authorization.
+authorize: Authorize another user to execute privileged commands. This command requires authorization.
+deauthorize: Deauthorize a previously authorized user. This command requires authorization.
+Note: Only authorized users can execute privileged commands.
+
+Storage
+The chatbot uses two JSON files for storing data:
+
+storage.json: Stores configuration and settings for the bot, including the prefix, authorized users, and ping behavior.
+sessions.json: Stores session IDs for maintaining context with the Inworld AI.
+Error Handling
+The code includes error handling for different scenarios. If an error occurs during communication with the Inworld AI, the bot will attempt to resend the message. Other errors will be logged to the console.
+
+Maintenance
+The code automatically clears the sessions every 15 minutes to prevent unused sessions from accumulating. You can adjust the interval by modifying the interval value in the code.
+
+Contributing
+Feel free to contribute to this code by submitting pull requests. You can add new features, improve existing code, or fix any issues you encounter.
+
+License
+This code is licensed under the MIT License. Feel free to use, modify, and distribute it according to the terms of the license.
+
+Disclaimer
+This code is provided as-is without any warranty. Use it at your own risk. The authors are not responsible for any damages or losses caused by the use of this code.
